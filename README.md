@@ -18,91 +18,37 @@ apk add tree
 tree -a -L 4 / > /directory_structure.txt
 ```
 
-## Configuration and settings
-
-To gather more information about the configuration and settings of the wolfi-base container image that are relevant to the general purpose operating system STIG, you can run the following shell commands inside the container:
-
-1. Check the version and release information:
-   ```
-   cat /etc/os-release
-   uname -a
-   ```
-
-2. List installed packages:
-   ```
-   apk info
-   ```
-
-3. Check user and group information:
-   ```
-   cat /etc/passwd
-   cat /etc/group
-   cat /etc/shadow
-   ```
-
-4. Check sudo configuration:
-   ```
-   cat /etc/sudoers
-   ls -l /etc/sudoers.d
-   ```
-
-5. Check SSH configuration (if SSH server is installed):
-   ```
-   cat /etc/ssh/sshd_config
-   ```
-
-6. Check network configuration:
-   ```
-   ip addr
-   cat /etc/hosts
-   cat /etc/resolv.conf
-   ```
-
-7. Check running processes:
-   ```
-   ps aux
-   ```
-
-8. Check open ports and network connections:
-   ```
-   netstat -tulpn
-   ```
-
-9. Check system logs:
-   ```
-   cat /var/log/messages
-   cat /var/log/syslog
-   cat /var/log/auth.log
-   ```
-
-10. Check file system mount points and permissions:
-    ```
-    mount
-    ls -ld / /etc /var /usr /home
-    ```
-
-11. Check system security settings:
-    ```
-    cat /etc/security/limits.conf
-    cat /etc/sysctl.conf
-    sysctl -a
-    ```
-
-12. Check installed services and their status:
-    ```
-    ls /etc/init.d
-    ls /etc/systemd/system
-    ```
-
-13. Check system auditing configuration (if auditd is installed):
-    ```
-    cat /etc/audit/auditd.conf
-    cat /etc/audit/audit.rules
-    ```
-
-Please note that some of these commands may not produce output or may not be applicable if the corresponding files, packages, or services are not present in the minimal wolfi-base image.
-
-By running these commands and providing the output, you can give me more context about the system configuration, installed packages, user and group settings, network configuration, running processes, and security settings. This information will help me better understand the wolfi-base image's compliance with the general purpose operating system STIG.
-
-Feel free to run these commands and share the relevant output, and I'll be happy to analyze it and provide further guidance on building your STIG checklist validator tool.
-
+https://github.com/afeddersen/rag-app/blob/main/artifacts/dod.md
+etc_apk_arch.md
+etc_apk_keys_wolfi-signing.rsa.pub.md
+etc_apk_repositories.md
+etc_apk_world.md
+etc_busybox-paths.d_busybox.md
+etc_group.md
+etc_host.conf.md
+etc_hostname.md
+etc_hosts.md
+etc_ld.so.conf.md
+etc_nsswitch.conf.md
+etc_os-release.md
+etc_passwd.md
+etc_profile.d_locale.sh.md
+etc_profile.md
+etc_protocols.md
+etc_resolv.conf.md
+etc_rpc.md
+etc_secfixes.d_wolfi.md
+etc_securetty.md
+etc_services.md
+etc_shadow.md
+etc_shells.md
+etc_ssl_certs_ca-certificates.crt.md
+etc_ssl_ct_log_list.cnf.dist.md
+etc_ssl_ct_log_list.cnf.md
+etc_ssl_misc_CA.pl.md
+etc_ssl_misc_tsget.pl.md
+etc_ssl_openssl.cnf.dist.md
+etc_ssl_openssl.cnf.md
+lynis.md
+stig-overview.md
+tree.md
